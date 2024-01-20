@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: pc
+Build-Jdk: 17.0.9
+Implementation-Title: springboot-jwt
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.pradeep
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/springboot-jwt
+Created-By: Maven Integration for Eclipse
+

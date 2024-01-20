@@ -20,6 +20,7 @@ import com.pradeep.service.JwtUserDetailsService;
 import com.pradeep.config.JwtTokenUtil;
 import com.pradeep.model.JwtRequest;
 import com.pradeep.model.JwtResponse;
+import com.pradeep.model.UserDTO;
 
 @RestController
 @CrossOrigin
@@ -46,6 +47,12 @@ public class JwtAuthenticationController {
 
 		return ResponseEntity.ok(new JwtResponse(token));
 	}
+	
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
+		return ResponseEntity.ok(userDetailsService.save(user));
+	}
+	
 
 	private void authenticate(String username, String password) throws Exception {
 		try {
